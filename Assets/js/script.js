@@ -2,7 +2,18 @@ var currentHour = dayjs().format("HH")
 
 // $(window).on('load', function() prevents the function below from running before everything on the page has loaded.
 $(window).on("load", function() {
-  
+
+// Grabs key and values from local storage to display correct todo with correct time after a refresh, or the page has been closed and opened again.
+  $("#hour-09 #todo").val(localStorage.getItem("09"));
+  $("#hour-10 #todo").val(localStorage.getItem("10"));
+  $("#hour-11 #todo").val(localStorage.getItem("11"));
+  $("#hour-12 #todo").val(localStorage.getItem("12"));
+  $("#hour-13 #todo").val(localStorage.getItem("13"));
+  $("#hour-14 #todo").val(localStorage.getItem("14"));
+  $("#hour-14 #todo").val(localStorage.getItem("15"));
+  $("#hour-15 #todo").val(localStorage.getItem("16"));
+  $("#hour-16 #todo").val(localStorage.getItem("17"));
+
 // Uses dayjs to display the current hour and date at the top of the page.
   setInterval(function () {
     $("#currentDay").text(dayjs().format("h:mma - MM/DD/YYYY"));
